@@ -27,7 +27,6 @@ const Weather = () => {
 
   const fetchWeatherData = async () => {
     const response = await axios.get(API_URL);
-    console.log(response.data);
     const desc = response.data.weather[0].description;
     const capitalDesc = desc.charAt(0).toUpperCase() + desc.slice(1);
     setWeatherData({
@@ -73,10 +72,7 @@ const Weather = () => {
           >
             <Input
               value={city}
-              onChange={(e) => {
-                setCity(e.target.value);
-                console.log(e.target.value);
-              }}
+              onChange={(e) => setCity(e.target.value)}
               variant="unstyled"
               placeholder="Enter City Name..."
               fontSize="xl"
