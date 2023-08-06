@@ -62,7 +62,7 @@ const Weather = () => {
           justifyContent="center"
           alignItems="center"
           height="100vh"
-          marginTop="-200px"
+          marginTop="-100px"
         >
           <Box
             p={8}
